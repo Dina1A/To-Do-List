@@ -5,7 +5,7 @@ Simple to do list using : HTML,CSS and DOM.
 
 **NAME: TO DO LIST**
 
-Including: 
+**Including:**
 - index file: HTML- Structure.
 - style file: CSS - Styling and Layout.
 - manip file: JavaScript (DOM manipulation) - Handling user interactions.
