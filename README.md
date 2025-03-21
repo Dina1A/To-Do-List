@@ -1,7 +1,7 @@
 # To-Do-List
 Simple to do list using : HTML,CSS and DOM.
 
-**This is particularly made to illustrate the project in hand ** 
+This is particularly made to illustrate the project in hand 
 
 **NAME: TO DO LIST**
 
