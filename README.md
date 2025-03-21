@@ -17,3 +17,5 @@ Simple to do list using : HTML,CSS and DOM.
 - Mark tasks (done/undone).
 - Editing tasks.
 - See the number of tasks in hand.
+
+Figma Design: https://www.figma.com/community/file/1192904575853859483/to-do-list
