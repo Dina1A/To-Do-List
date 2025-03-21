@@ -11,9 +11,9 @@ Including:
 - manip file: JavaScript (DOM manipulation) - Handling user interactions.
 
 **Features:**
--Adding new tasks (title, description, and time).
--Delete tasks.
--Stores tasks in Local Storage.
--Mark tasks (done/undone).
--Editing tasks.
--See the number of tasks in hand.
+- Adding new tasks (title, description, and time).
+- Delete tasks.
+- Stores tasks in Local Storage.
+- Mark tasks (done/undone).
+- Editing tasks.
+- See the number of tasks in hand.
