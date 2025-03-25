@@ -2,27 +2,17 @@ let todo = JSON.parse(localStorage.getItem("todo")) || [];
 const title = document.getElementById("todoInput1");
 const about = document.getElementById("todoInput2");
 const listContainer = document.getElementById("list-container");
-const noTasksMessage = document.querySelector(".no-tasks");
-const addButton = document.querySelector(".add-btn");
-
-let editIndex = -1;
+const noTasksMessage = document.querySelector(".no-tasks"); 
 
 function addTask() {
   if (title.value.trim() !== '' && about.value.trim() !== '') {
-    if (editIndex === -1) {
-      let newTask = { title: title.value, about: about.value };
-      todo.push(newTask);
-    } else {
-      todo[editIndex] = { title: title.value, about: about.value };
-      editIndex = -1;
-      addButton.textContent = "+";
-    }
-
+    let newTask = { title: title.value, about: about.value };
+    todo.push(newTask);
     saveToLocalStorage();
     displayTasks();
     title.value = "";
     about.value = "";
-    updateNoTasksMessage();
+    updateNoTasksMessage(); 
   }
 }
 
@@ -43,14 +33,7 @@ function displayTasks() {
     aboutPara.textContent = task.about;
     aboutPara.style.margin = "5px 0";
 
-    let editBtn = document.createElement("button");
-    editBtn.textContent = "✏️";
-    editBtn.style.marginLeft = "10px";
-    editBtn.onclick = function () {
-      editTask(index);
-    };
-
-    let deleteBtn = document.createElement("delete-btn");
+    let deleteBtn = document.createElement("button");
     deleteBtn.textContent = "X";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.onclick = function () {
@@ -60,20 +43,12 @@ function displayTasks() {
     li.appendChild(titleSpan);
     li.appendChild(document.createElement("br"));
     li.appendChild(aboutPara);
-    li.appendChild(editBtn);
     li.appendChild(deleteBtn);
 
     listContainer.appendChild(li);
   });
 
-  updateNoTasksMessage();
-}
-
-function editTask(index) {
-  title.value = todo[index].title;
-  about.value = todo[index].about;
-  editIndex = index;
-  addButton.textContent = "✔";
+  updateNoTasksMessage(); 
 }
 
 function deleteTask(index) {
@@ -83,7 +58,11 @@ function deleteTask(index) {
 }
 
 function updateNoTasksMessage() {
-  noTasksMessage.style.display = todo.length > 0 ? "none" : "block";
+  if (todo.length > 0) {
+    noTasksMessage.style.display = "none"; 
+  } else {
+    noTasksMessage.style.display = "block"; 
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
