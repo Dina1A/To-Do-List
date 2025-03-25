@@ -44,7 +44,7 @@ function displayTasks() {
     aboutPara.style.margin = "5px 0";
 
     let editBtn = document.createElement("button");
-    editBtn.textContent = "✏️";
+    editBtn.textContent = "✏";
     editBtn.style.marginLeft = "10px";
     editBtn.onclick = function () {
       editTask(index);
