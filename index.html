@@ -9,7 +9,6 @@ content="width=device-width,initial-scale=1.0">
 <meta http-equiv="refresh" content="60">
 <title>To Do List</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
 
 </head>
 
@@ -18,26 +17,34 @@ content="width=device-width,initial-scale=1.0">
 <header>
 </header>
 
-<section class="inTasks">
-<div class="inputs">
+<section class="todo">
+<div class="input">
 
-<input type="text" class="title-box" placeholder=" Title...">
-<input type="text" class="about-box" placeholder=" About...">
-<button class="add-btn" onclick="addTask()">+</button>
+<input type="text" class="title-box" id ="todoInput1" placeholder=" Title...">
+<input type="text" class="about-box" id ="todoInput2" placeholder=" About...">
 <div class="no-tasks">
   <p>No tasks</p>
 </div>
+<button class="add-btn" onclick="addTask()">+</button>
 
-</div>
-
-<ul class="scroll">
-  <li id="todoList"></li>
+<ul id="list-container">
+  <li>
+    <span>Task Title</span>
+    <p>Task description goes here...</p>
+    <div class="task-buttons">
+      <button>🖊️</button>
+      <button>X</button>
+    </div>
+  </li>
+  
 </ul>
+
+
 
 </section>
 
 
-
+<script src="script.js" ></script>
 </body>
 
 </html>
