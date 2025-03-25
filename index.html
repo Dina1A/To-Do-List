@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+<meta name="keywords" content="To do list">
+<meta http-equiv="refresh" content="60">
+<title>To Do List</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<header>
+</header>
+
+<section class="todo">
+<div class="input">
+
+<input type="text" class="title-box" id ="todoInput1" placeholder=" Title...">
+<input type="text" class="about-box" id ="todoInput2" placeholder=" About...">
+<div class="no-tasks">
+  <p>No tasks</p>
+</div>
+<button class="add-btn" onclick="addTask()">+</button>
+
+<ul id="list-container">
+  <li>
+    <span>Task Title</span>
+    <p>Task description goes here...</p>
+    <div class="task-buttons">
+      <button>🖊️</button>
+      <button>X</button>
+    </div>
+  </li>
+  
+</ul>
+
+
+
+</section>
+
+
+<script src="script.js" ></script>
+</body>
+
+</html>
